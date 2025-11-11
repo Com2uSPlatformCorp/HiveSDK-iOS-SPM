@@ -1,8 +1,10 @@
 // swift-tools-version: 5.10
+// Copyright © 2025 Com2us Platform. All rights reserved.
+
 import PackageDescription
 
 private let isDevMode = false
-private let packageVersion = "25.8.0-beta2"
+private let packageVersion = "25.10.0-beta1"
 
 let package = Package(
     name: "Hive",
@@ -30,6 +32,20 @@ let package = Package(
             type: .static,
             targets: [
                 "UnityPlugin"
+            ]
+        ),
+        .library(
+            name: "Hive_SDKPluginC2S",
+            type: .static,
+            targets: [
+                "PluginC2S"
+            ]
+        ),
+        .library(
+            name: "Hive_SDKUnityPluginC2S",
+            type: .static,
+            targets: [
+                "UnityPluginC2S"
             ]
         ),
         .library(
@@ -89,6 +105,13 @@ let package = Package(
             ]
         ),
         .library(
+            name: "Hive_IdentityVerification",
+            type: .static,
+            targets: [
+                "IdentityVerification"
+            ]
+        ),
+        .library(
             name: "Hive_MatchMaking",
             type: .static,
             targets: [
@@ -121,13 +144,6 @@ let package = Package(
             type: .static,
             targets: [
                 "AnalyticsProviderAdjust"
-            ]
-        ),
-        .library(
-            name: "Hive_AnalyticsProviderAirbridge",
-            type: .static,
-            targets: [
-                "AnalyticsProviderAirbridge"
             ]
         ),
         .library(
@@ -235,8 +251,7 @@ let package = Package(
         .package(url: "https://github.com/adjust/ios_sdk.git", exact: "5.4.3"),                                         // Adjust
         .package(url: "https://github.com/AppsFlyerSDK/AppsFlyerFramework.git", exact: "6.17.2"),                       // AppsFlyer
         .package(url: "https://github.com/singular-labs/Singular-iOS-SDK.git", exact: "12.8.1"),                        // Singular
-        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", exact: "11.15.0"),                             // Firebase
-        .package(url: "https://github.com/ab180/airbridge-ios-sdk-deployment.git", exact: "4.7.1"),                     // AirBridge
+        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", exact: "11.15.0"),                            // Firebase
         .package(url: "https://github.com/facebook/facebook-ios-sdk.git", exact: "18.0.0"),                             // FaceBook
         .package(url: "https://github.com/google/GoogleSignIn-iOS.git", exact: "9.0.0"),                                // Google
         .package(url: "https://github.com/line/line-sdk-ios-swift.git", exact: "5.13.0"),                               // Line
@@ -260,10 +275,10 @@ let package = Package(
                 "HiveSDK.swift"
             ]
         ),
-        xcframeworkTarget(name: "HIVECore", checksum: "dc04e670067da65a9e1232b21fd28b807761f3889bb24ff8b41b5070bff7acb0"),
-        xcframeworkTarget(name: "HIVEProtocol", checksum: "8d4332705fda5c9c0a9d2765e182e8839fd2c20ee9b57549564b17cedc9ea942"),
-        xcframeworkTarget(name: "HIVEUI", checksum: "697cf4aa489f40810b4470e4e4c072941024c7bab9ee9af845be2a0f6dbaf01e"),
-        xcframeworkTarget(name: "HIVEService", checksum: "40f956848588ec2caada6f08203c263bc9c276f69b443159bde02313d46099e6"),
+        xcframeworkTarget(name: "HIVECore", checksum: "0ff8df9f60ad416c4925e302960946d0409ad2b968275e791f2028298a28d901"),
+        xcframeworkTarget(name: "HIVEProtocol", checksum: "2becb235d908c78ee2168a3da185cd7213456c7fa10a271f1813e2442c203da6"),
+        xcframeworkTarget(name: "HIVEUI", checksum: "586d4eb37cef0e2665f0037688ddaaf3fd5d5d3126159b26af93c6b0a6166ca2"),
+        xcframeworkTarget(name: "HIVEService", checksum: "f5734641bf2dd35ab6feaa20591e7aa0e5508b1165be27241d89e7ff36fb9c64"),
         bundleTarget(isPrefixUppercased: true, name: "Core"),
         bundleTarget(isPrefixUppercased: true, name: "UI", as: ""),
         bundleTarget(isPrefixUppercased: true, name: "Service"),
@@ -285,7 +300,7 @@ let package = Package(
                 ])
             ]
         ),
-        xcframeworkTarget(name: "HIVE_SDK_Plugin", checksum: "f9a36324631138a035e18ce0bd4e7e858e44bd705a8b01219855182741f9c910"),
+        xcframeworkTarget(name: "HIVE_SDK_Plugin", checksum: "553f1ca4bddb2ac9fe4f89162ceaf6498caa308069cdf78228cdeabb8e5831f1"),
 // MARK: HIVE_SDK_UnityPlugin
         .target(
             name: "UnityPlugin",
@@ -304,17 +319,56 @@ let package = Package(
                 ])
             ]
         ),
-        xcframeworkTarget(name: "HIVE_SDK_UnityPlugin", checksum: "ce22b6e770a118878fe4f9bf15ae293eb5f4b65e919a9ca096781ccd54378903"),
+        xcframeworkTarget(name: "HIVE_SDK_UnityPlugin", checksum: "99360dd51598bdf95dfec886993893c708d4795015649a8a4a3162aa39eded83"),
+// MARK: HIVE_SDK_Plugin_C2S
+        .target(
+            name: "PluginC2S",
+            dependencies: [
+                .target(name: "HiveSDK"),
+                .target(name: "HIVE_SDK_Plugin_C2S")
+            ],
+            path: "SDKPluginC2S",
+            publicHeadersPath: ".",
+            cxxSettings: [
+                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
+            ],
+            linkerSettings: [
+                .unsafeFlags([
+                    "-ObjC"
+                ])
+            ]
+        ),
+        xcframeworkTarget(name: "HIVE_SDK_Plugin_C2S", checksum: "dc06c50280002050f5c1234e83135fa265dc9c6bdf66ebf7ec3b8444dd8fb302"),
+// MARK: HIVE_SDK_UnityPlugin_C2S
+        .target(
+            name: "UnityPluginC2S",
+            dependencies: [
+                .target(name: "HiveSDK"),
+                .target(name: "HIVE_SDK_UnityPlugin_C2S")
+            ],
+            path: "SDKUnityPluginC2S",
+            publicHeadersPath: ".",
+            cxxSettings: [
+                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
+            ],
+            linkerSettings: [
+                .unsafeFlags([
+                    "-ObjC"
+                ])
+            ]
+        ),
+        xcframeworkTarget(name: "HIVE_SDK_UnityPlugin_C2S", checksum: "afd5150d252e9fc36edb4ce6374c653ac840498d74f91513dc9061c897f7b1fa"),
 // MARK: HiveAdultConfirm
         .target(
             name: "AdultConfirm",
             dependencies: [
                 .target(name: "HiveSDK"),
+                .target(name: "IdentityVerification"),
                 .target(name: "HiveAdultConfirm")
             ],
             path: "AdultConfirm"
         ),
-        xcframeworkTarget(name: "HiveAdultConfirm", checksum: "2d86fb0c840a15005690ac648c6c28d151f3b898306e6cc6b5f7148af4ceb24c"),
+        xcframeworkTarget(name: "HiveAdultConfirm", checksum: "8eda97ab9a103e47abed9fbdaed4957b054666512c89aeaf58ec57986235176e"),
 // MARK: HiveAnalyticsConsentMode
         .target(
             name: "AnalyticsConsentMode",
@@ -324,7 +378,7 @@ let package = Package(
             ],
             path: "AnalyticsConsentMode"
         ),
-        xcframeworkTarget(name: "HiveAnalyticsConsentMode", checksum: "949643a84374f4924733548c919895374c6dae11f48042e46bb320e50882fb39"),
+        xcframeworkTarget(name: "HiveAnalyticsConsentMode", checksum: "6e14a9a5fc65a47295cd3bec656599345605fe05799d641d8cfdcbac798c1326"),
 // MARK: HiveChat
         .target(
             name: "Chat",
@@ -334,7 +388,7 @@ let package = Package(
             ],
             path: "Chat"
         ),
-        xcframeworkTarget(name: "HiveChat", checksum: "92bbf108c8d63c23afdc3670f3f1de015ff0cbd1fdc60f047f3f9f96cadeb85d"),
+        xcframeworkTarget(name: "HiveChat", checksum: "8fa1eecdcb92142aac370cce15e52f15d89eeaa189f78f4b8b852ac008875b80"),
 // MARK: HiveDataStore
         .target(
             name: "DataStore",
@@ -344,7 +398,7 @@ let package = Package(
             ],
             path: "DataStore"
         ),
-        xcframeworkTarget(name: "HiveDataStore", checksum: "875b7b48a17487bb973105a0efb9ea6df801e7bffdfdf39b20739d0b896e3cdc"),
+        xcframeworkTarget(name: "HiveDataStore", checksum: "b0c8432ff39e49e8411bf6b8511cdde0be673ee7da946e170934f57c2bcfb077"),
 // MARK: HiveDeviceManagement
         .target(
             name: "DeviceManagement",
@@ -355,7 +409,7 @@ let package = Package(
             ],
             path: "DeviceManagement"
         ),
-        xcframeworkTarget(name: "HiveDeviceManagement", checksum: "fc382fae4264560ffdfa08b90079d62b219e933a1c5ba7f9b7bbdb7a8e402b60"),
+        xcframeworkTarget(name: "HiveDeviceManagement", checksum: "d5e86477bbd98c7ec3cf8cf90ddd883da2b541169c0a475f7f127363bf8d369c"),
         bundleTarget(name: "DeviceManagement"),
 // MARK: HIVEExtensions
         .target(
@@ -366,7 +420,7 @@ let package = Package(
             ],
             path: "Extensions"
         ),
-        xcframeworkTarget(name: "HIVEExtensions", checksum: "eaf911a0a97a561f7ab6afa29e069238b981347f42f3c66651f0dd1fb63165fa"),
+        xcframeworkTarget(name: "HIVEExtensions", checksum: "c2dc2ed8882c4b7c1806039551d8091eb6b6714818c0d47819539327066a5bda"),
 // MARK: HIVEIAPV4
         .target(
             name: "IAPV4",
@@ -376,19 +430,30 @@ let package = Package(
             ],
             path: "IAPV4"
         ),
-        xcframeworkTarget(name: "HIVEIAPV4", checksum: "c5fa73f555bdba0dc23f5e134ed313f358c13476ed0db6fb896a2d99a57bf03d"),
+        xcframeworkTarget(name: "HIVEIAPV4", checksum: "fb1cf4038beae949e91800d16ca38d174900c0b84efb0e71feea3978f54083aa"),
         bundleTarget(isPrefixUppercased: true, name: "IAPV4"),
 // MARK: HiveIAPV4Repayment
         .target(
             name: "IAPV4Repayment",
             dependencies: [
                 .target(name: "HiveSDK"),
+                .target(name: "IAPV4"),
                 .target(name: "HiveIAPV4Repayment")
             ],
             path: "IAPV4Repayment"
         ),
-        xcframeworkTarget(name: "HiveIAPV4Repayment", checksum: "9e93335e547816a884813ecd7eef8e909a011cd1bf5edbff51cd6374fe37055e"),
+        xcframeworkTarget(name: "HiveIAPV4Repayment", checksum: "ae336c63e0b0e81b5decd3f275e757c6d14f6976f93a4cce89caba2a3ec7a5ba"),
         bundleTarget(isPrefixUppercased: true, name: "IAPV4Repayment"),
+// MARK: HiveIdentityVerification
+        .target(
+            name: "IdentityVerification",
+            dependencies: [
+                .target(name: "HiveSDK"),
+                .target(name: "HiveIdentityVerification")
+            ],
+            path: "IdentityVerification"
+        ),
+        xcframeworkTarget(name: "HiveIdentityVerification", checksum: "71ae7bbf2e134063fa8e212f44b748f12540b16aecaceaf2e5c956bf79db6401"),
 // MARK: HiveMatchMaking
         .target(
             name: "MatchMaking",
@@ -398,7 +463,7 @@ let package = Package(
             ],
             path: "MatchMaking"
         ),
-        xcframeworkTarget(name: "HiveMatchMaking", checksum: "c743fd66bd724e73e9c882fcc59903c37bac81d75fbcfe64090acc20411be549"),
+        xcframeworkTarget(name: "HiveMatchMaking", checksum: "622ab638bae8f03213b9a65dd78ca64934c3aea146a21411d766ad84fc192537"),
 // MARK: HivePromotion
         .target(
             name: "Promotion",
@@ -409,7 +474,7 @@ let package = Package(
             ],
             path: "Promotion"
         ),
-        xcframeworkTarget(name: "HivePromotion", checksum: "84908fe17d6d8af2178c16bc5f4c00e41bd8588b71c19a47e4452658a4789ace"),
+        xcframeworkTarget(name: "HivePromotion", checksum: "501ef4f0813b4c9945674e62188a0ab82228608a627d62bb1f309ae95834d44e"),
         bundleTarget(name: "Promotion"),
 // MARK: HiveRealNameVerification
         .target(
@@ -420,7 +485,7 @@ let package = Package(
             ],
             path: "RealNameVerification"
         ),
-        xcframeworkTarget(name: "HiveRealNameVerification", checksum: "4e36aae0e9a98595c810cbb688b4967cae2ed2971ea5210ddc82a0ccb2ea86bd"),
+        xcframeworkTarget(name: "HiveRealNameVerification", checksum: "569920466ebf170fc582a8f1a0486ae2a7c9d63d0b5c217ae327939b0f99b85b"),
         bundleTarget(name: "RealNameVerification"),
 // MARK: HiveRecaptcha
         .target(
@@ -432,7 +497,7 @@ let package = Package(
             ],
             path: "Recaptcha"
         ),
-        xcframeworkTarget(name: "HiveRecaptcha", checksum: "706a1edf43761fa7d7edfe9fd23611ecc1ab97eb30997bf950fc9f70ad72de56"),
+        xcframeworkTarget(name: "HiveRecaptcha", checksum: "ab63e9337e072f360560ef136496f25b3114eb96eba4e38985d7e7a7f8c9f542"),
 // MARK: HiveAnalyticsProviderAdjust
         .target(
             name: "AnalyticsProviderAdjust",
@@ -443,18 +508,7 @@ let package = Package(
             ],
             path: "AnalyticsProviderAdjust"
         ),
-        xcframeworkTarget(name: "ProviderAdjust", checksum: "9a18b5ec4745cbbcd070bfc20017bbd8a498da09158724019421c60c745fdea7"),
-// MARK: HiveAnalyticsProviderAirbridge
-        .target(
-            name: "AnalyticsProviderAirbridge",
-            dependencies: [
-                .target(name: "HiveSDK"),
-                .target(name: "ProviderAirbridge"),
-                .product(name: "Airbridge", package: "airbridge-ios-sdk-deployment")
-            ],
-            path: "AnalyticsProviderAirbridge"
-        ),
-        xcframeworkTarget(name: "ProviderAirbridge", checksum: "c6276061884b1df70c5f1b2cdd6c7343517fc43e1ae89287d6ecfad5b281e4c8"),
+        xcframeworkTarget(name: "ProviderAdjust", checksum: "dd6e302d3d2b391ab2747c2beb475765ac07594d6132177c299957d8611cf407"),
 // MARK: HiveAnalyticsProviderAppsFlyer
         .target(
             name: "AnalyticsProviderAppsFlyer",
@@ -465,7 +519,7 @@ let package = Package(
             ],
             path: "AnalyticsProviderAppsFlyer"
         ),
-        xcframeworkTarget(name: "ProviderAppsFlyer", checksum: "c9df519c398cf0c4475663142a23e88c4ae43010fa775b47b248e2784ecb628c"),
+        xcframeworkTarget(name: "ProviderAppsFlyer", checksum: "66db5f0b7a41caf85ec93d52e53e0f32f951bf78213bb68a9ff5caab2a072789"),
 // MARK: HiveAnalyticsProviderFirebase
         .target(
             name: "AnalyticsProviderFirebase",
@@ -476,7 +530,7 @@ let package = Package(
             ],
             path: "AnalyticsProviderFirebase"
         ),
-        xcframeworkTarget(name: "ProviderFirebase", checksum: "e1f3cace286df4ab2d2624e861411b0a694cff3a6751ed74fc2c9ffc784eb44f"),
+        xcframeworkTarget(name: "ProviderFirebase", checksum: "33198ae89d87667ee5204267788dc93de15f163acca137b79f928c7910cd89e0"),
 // MARK: HiveAnalyticsProviderSingular
         .target(
             name: "AnalyticsProviderSingular",
@@ -487,7 +541,7 @@ let package = Package(
             ],
             path: "AnalyticsProviderSingular"
         ),
-        xcframeworkTarget(name: "ProviderSingular", checksum: "2a98b445aeb8ce09ec181d8b503cd13ad7e2a9eb28c425543406cca15d2be429"),
+        xcframeworkTarget(name: "ProviderSingular", checksum: "ccf25d4a89fbf6365784281a7593eebbdaccfb84f16588bedeae4ffc1559db00"),
 // MARK: HiveAuthV4ProviderApple(GameCenter)
         .target(
             name: "AuthV4ProviderAppleGameCenter",
@@ -497,7 +551,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderAppleGameCenter"
         ),
-        xcframeworkTarget(name: "ProviderApple", checksum: "6081d48fd5618ed3b7df941bf7e399f391a1a8a51d15f42ef97e2e9eb230e3e8"),
+        xcframeworkTarget(name: "ProviderApple", checksum: "924f51da306011f636548f327e79ef55c504fc32537f50c34312117edb9b5fa7"),
 // MARK: HiveAuthV4ProviderFacebook
         .target(
             name: "AuthV4ProviderFacebook",
@@ -510,7 +564,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderFacebook"
         ),
-        xcframeworkTarget(name: "ProviderFacebook", checksum: "e9433c5ac09c0a28be6dc39d618a2deeb565531f1a873136a69940b0568a8588"),
+        xcframeworkTarget(name: "ProviderFacebook", checksum: "e3629320ee90683df369f48d5e07871eddc24867096a69e91424fa2795130b1f"),
 // MARK: HiveAuthV4ProviderGoogle
         .target(
             name: "AuthV4ProviderGoogle",
@@ -521,7 +575,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderGoogle"
         ),
-        xcframeworkTarget(name: "ProviderGoogle", checksum: "2cd08903d83580324eb83c926cb234881aa0fb0787cf33b64c6a74cdc3d2981e"),
+        xcframeworkTarget(name: "ProviderGoogle", checksum: "0d49b8948e508e78552fb14b37172d78a59a50b6465903b6fd2808cdb2be5e0a"),
 // MARK: HiveAuthV4ProviderHive
         .target(
             name: "AuthV4ProviderHive",
@@ -531,7 +585,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderHive"
         ),
-        xcframeworkTarget(name: "ProviderHive", checksum: "38437b3a0cde19df73c9c940741d3a4433b64b1280745bbe0f758cfcfe242170"),
+        xcframeworkTarget(name: "ProviderHive", checksum: "919cb48b7c2cf4ef3e7dc07c9521b937048b8f198865a74d807297365ef37835"),
 // MARK: HiveAuthV4ProviderLine
         .target(
             name: "AuthV4ProviderLine",
@@ -542,7 +596,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderLine"
         ),
-        xcframeworkTarget(name: "ProviderLine", checksum: "47703be1b0083f97425ef0bf998b92274ffa90a45a097a1e0bd6fdd18bbe316f"),
+        xcframeworkTarget(name: "ProviderLine", checksum: "d298ad3f2169921c3e77fc0f307fb0647d76b3cc29992ac7bdfe8dc654b65b3d"),
 // MARK: HiveAuthV4ProviderSignInApple
         .target(
             name: "AuthV4ProviderSignInApple",
@@ -552,7 +606,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderSignInApple"
         ),
-        xcframeworkTarget(name: "ProviderSignInApple", checksum: "5a5b9c5166e0dc6a43e176c669e7c1a000a0935a8ca53b7b7169eddeafc2fa47"),
+        xcframeworkTarget(name: "ProviderSignInApple", checksum: "341a5b584a40696c42505c1fb69acf62fee5520c6714f1c6b0fddccce84d895e"),
 // MARK: HiveAuthV4ProviderSteam
         .target(
             name: "AuthV4ProviderSteam",
@@ -562,7 +616,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderSteam"
         ),
-        xcframeworkTarget(name: "ProviderSteam", checksum: "1b8c87e2079bb5d12b90df2d3f7eb2489ffb4c0fc1eb9c4950b190da6a85b9e0"),
+        xcframeworkTarget(name: "ProviderSteam", checksum: "878f6789be9b3ab6bd1a7dbf4b1d7bad55d356dcffd9a809788bd0f7906e6c10"),
 // MARK: HiveAuthV4ProviderTelegram
         .target(
             name: "AuthV4ProviderTelegram",
@@ -572,7 +626,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderTelegram"
         ),
-        xcframeworkTarget(name: "ProviderTelegram", checksum: "45a5d64302753be66d2abff2d640b2b65a920e49f2d9c962b679d91332aa194e"),
+        xcframeworkTarget(name: "ProviderTelegram", checksum: "b67f26c641b899eb251f1b795e886754c8ae6f2eeaa5b765928a727475b512ac"),
 // MARK: HiveAuthV4ProviderVK
         .target(
             name: "AuthV4ProviderVK",
@@ -582,7 +636,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderVK"
         ),
-        xcframeworkTarget(name: "ProviderVK", checksum: "153aadee22d24db456da0d51960da1ea35336f097a1fdf8f7de2b745f814f35e"),
+        xcframeworkTarget(name: "ProviderVK", checksum: "405853a0404ccbc574b48f5ca0ca9b03a4451960106533d166502c3929411428"),
 // MARK: HiveAuthV4ProviderWeverse
         .target(
             name: "AuthV4ProviderWeverse",
@@ -592,7 +646,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderWeverse"
         ),
-        xcframeworkTarget(name: "ProviderWeverse", checksum: "863ec45c005aea475021972ad12153bcaf67e5349762d7df642a8b6d6b157a4d"),
+        xcframeworkTarget(name: "ProviderWeverse", checksum: "6f0369a00252d11228c439365fed2e2936aa394ae7dfe07973ff100248045cf6"),
 // MARK: HiveAuthV4ProviderX
         .target(
             name: "AuthV4ProviderX",
@@ -602,7 +656,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderX"
         ),
-        xcframeworkTarget(name: "ProviderX", checksum: "466acc87dc5a18898f3c25bef0b9ff261f56a4ae8734fe9299fdcac55329b1a1")
+        xcframeworkTarget(name: "ProviderX", checksum: "c9ecb7df84eb6f724cdd72c5a5a20861d46eb621dce2325fa7688c4bfc36fdea")
     ]
 )
 
