@@ -431,7 +431,7 @@ let package = Package(
             path: "IAPV4"
         ),
         xcframeworkTarget(name: "HIVEIAPV4", checksum: "fb1cf4038beae949e91800d16ca38d174900c0b84efb0e71feea3978f54083aa"),
-        bundleTarget(isPrefixUppercased: true, name: "IAPV4"),
+        bundleTarget(name: "IAPV4"),
 // MARK: HiveIAPV4Repayment
         .target(
             name: "IAPV4Repayment",
@@ -443,7 +443,7 @@ let package = Package(
             path: "IAPV4Repayment"
         ),
         xcframeworkTarget(name: "HiveIAPV4Repayment", checksum: "ae336c63e0b0e81b5decd3f275e757c6d14f6976f93a4cce89caba2a3ec7a5ba"),
-        bundleTarget(isPrefixUppercased: true, name: "IAPV4Repayment"),
+        bundleTarget(name: "IAPV4Repayment"),
 // MARK: HiveIdentityVerification
         .target(
             name: "IdentityVerification",
