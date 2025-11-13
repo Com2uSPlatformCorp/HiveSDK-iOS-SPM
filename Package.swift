@@ -286,10 +286,17 @@ let package = Package(
         .target(
             name: "Plugin",
             dependencies: [
+                .target(name: "Plugin_ObjC")
+            ],
+            path: "SDKPlugin"
+        ),
+        .target(
+            name: "Plugin_ObjC",
+            dependencies: [
                 .target(name: "HiveSDK"),
                 .target(name: "HIVE_SDK_Plugin")
             ],
-            path: "SDKPlugin",
+            path: "SDK_ObjC/SDKPlugin_ObjC",
             publicHeadersPath: ".",
             cxxSettings: [
                 .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
@@ -305,10 +312,17 @@ let package = Package(
         .target(
             name: "UnityPlugin",
             dependencies: [
+                .target(name: "UnityPlugin_ObjC")
+            ],
+            path: "SDKUnityPlugin"
+        ),
+        .target(
+            name: "UnityPlugin_ObjC",
+            dependencies: [
                 .target(name: "HiveSDK"),
                 .target(name: "HIVE_SDK_UnityPlugin")
             ],
-            path: "SDKUnityPlugin",
+            path: "SDK_ObjC/SDKUnityPlugin_ObjC",
             publicHeadersPath: ".",
             cxxSettings: [
                 .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
@@ -324,10 +338,17 @@ let package = Package(
         .target(
             name: "PluginC2S",
             dependencies: [
+                .target(name: "PluginC2S_ObjC")
+            ],
+            path: "SDKPluginC2S"
+        ),
+        .target(
+            name: "PluginC2S_ObjC",
+            dependencies: [
                 .target(name: "HiveSDK"),
                 .target(name: "HIVE_SDK_Plugin_C2S")
             ],
-            path: "SDKPluginC2S",
+            path: "SDK_ObjC/SDKPluginC2S_ObjC",
             publicHeadersPath: ".",
             cxxSettings: [
                 .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
@@ -343,10 +364,17 @@ let package = Package(
         .target(
             name: "UnityPluginC2S",
             dependencies: [
+                .target(name: "UnityPluginC2S_ObjC")
+            ],
+            path: "SDKUnityPluginC2S"
+        ),
+        .target(
+            name: "UnityPluginC2S_ObjC",
+            dependencies: [
                 .target(name: "HiveSDK"),
                 .target(name: "HIVE_SDK_UnityPlugin_C2S")
             ],
-            path: "SDKUnityPluginC2S",
+            path: "SDK_ObjC/SDKUnityPluginC2S_ObjC",
             publicHeadersPath: ".",
             cxxSettings: [
                 .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
