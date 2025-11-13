@@ -596,7 +596,7 @@ let package = Package(
             ],
             path: "AuthV4ProviderLine"
         ),
-        xcframeworkTarget(name: "ProviderLine", checksum: "753f0db42c51aa0e44d76f2cee8874b4f7230a417adbe34f999503c3c5aa3f5a"),
+        xcframeworkTarget(name: "ProviderLine", checksum: "20266741cca0b06e936f62ebb16ddf68dc23b25b7e0bc2f2e27ade52656a0d80"),
 // MARK: HiveAuthV4ProviderSignInApple
         .target(
             name: "AuthV4ProviderSignInApple",
