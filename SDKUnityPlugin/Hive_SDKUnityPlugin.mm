@@ -1,9 +1,10 @@
 //
-//  Hive_SDKPlugin_ObjC.h
+//  Hive_SDKUnityPlugin.mm
 //  Hive
 //
 //  Created by junely on 2025/08/04.
 //  Copyright © 2025 Com2us Platform. All rights reserved.
 //
 
-@import HIVE_SDK_Plugin;
+#include "Hive_SDKUnityPlugin.h"
+

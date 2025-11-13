@@ -286,104 +286,44 @@ let package = Package(
         .target(
             name: "Plugin",
             dependencies: [
-                .target(name: "Plugin_ObjC")
-            ],
-            path: "SDKPlugin"
-        ),
-        .target(
-            name: "Plugin_ObjC",
-            dependencies: [
                 .target(name: "HiveSDK"),
                 .target(name: "HIVE_SDK_Plugin")
             ],
-            path: "SDK_ObjC/SDKPlugin_ObjC",
-            publicHeadersPath: ".",
-            cxxSettings: [
-                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
-            ],
-            linkerSettings: [
-                .unsafeFlags([
-                    "-ObjC"
-                ])
-            ]
+            path: "SDKPlugin",
+            publicHeadersPath: "."
         ),
         xcframeworkTarget(name: "HIVE_SDK_Plugin", checksum: "3a05fb3fdb9c31ae286c987b2831d8376e42fde9334ca00ef04a116d3d36bd40"),
 // MARK: HIVE_SDK_UnityPlugin
         .target(
             name: "UnityPlugin",
             dependencies: [
-                .target(name: "UnityPlugin_ObjC")
-            ],
-            path: "SDKUnityPlugin"
-        ),
-        .target(
-            name: "UnityPlugin_ObjC",
-            dependencies: [
                 .target(name: "HiveSDK"),
                 .target(name: "HIVE_SDK_UnityPlugin")
             ],
-            path: "SDK_ObjC/SDKUnityPlugin_ObjC",
-            publicHeadersPath: ".",
-            cxxSettings: [
-                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
-            ],
-            linkerSettings: [
-                .unsafeFlags([
-                    "-ObjC"
-                ])
-            ]
+            path: "SDKUnityPlugin",
+            publicHeadersPath: "."
         ),
         xcframeworkTarget(name: "HIVE_SDK_UnityPlugin", checksum: "302f95066957d1a6c50a79c5ad6e1e1aa498e7de7c052a22efadfaed7d5007c3"),
 // MARK: HIVE_SDK_Plugin_C2S
         .target(
             name: "PluginC2S",
             dependencies: [
-                .target(name: "PluginC2S_ObjC")
-            ],
-            path: "SDKPluginC2S"
-        ),
-        .target(
-            name: "PluginC2S_ObjC",
-            dependencies: [
                 .target(name: "HiveSDK"),
                 .target(name: "HIVE_SDK_Plugin_C2S")
             ],
-            path: "SDK_ObjC/SDKPluginC2S_ObjC",
-            publicHeadersPath: ".",
-            cxxSettings: [
-                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
-            ],
-            linkerSettings: [
-                .unsafeFlags([
-                    "-ObjC"
-                ])
-            ]
+            path: "SDKPluginC2S",
+            publicHeadersPath: "."
         ),
         xcframeworkTarget(name: "HIVE_SDK_Plugin_C2S", checksum: "cffbdcb5d7fa26b85dc6ea522119c1ce00e0cb70033b4a365219ffd96cb7f9d3"),
 // MARK: HIVE_SDK_UnityPlugin_C2S
         .target(
             name: "UnityPluginC2S",
             dependencies: [
-                .target(name: "UnityPluginC2S_ObjC")
-            ],
-            path: "SDKUnityPluginC2S"
-        ),
-        .target(
-            name: "UnityPluginC2S_ObjC",
-            dependencies: [
                 .target(name: "HiveSDK"),
                 .target(name: "HIVE_SDK_UnityPlugin_C2S")
             ],
-            path: "SDK_ObjC/SDKUnityPluginC2S_ObjC",
-            publicHeadersPath: ".",
-            cxxSettings: [
-                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
-            ],
-            linkerSettings: [
-                .unsafeFlags([
-                    "-ObjC"
-                ])
-            ]
+            path: "SDKUnityPluginC2S",
+            publicHeadersPath: "."
         ),
         xcframeworkTarget(name: "HIVE_SDK_UnityPlugin_C2S", checksum: "df9f2101162ef184c8f49956a18a455d62899bb138553ab8206b0558f9eb3f96"),
 // MARK: HiveAdultConfirm
