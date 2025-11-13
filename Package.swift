@@ -282,12 +282,7 @@ let package = Package(
                 .target(name: "HIVE_SDK_Plugin")
             ],
             path: "SDKPlugin",
-            publicHeadersPath: ".",
-            linkerSettings: [
-                .unsafeFlags([
-                    "-ObjC"
-                ])
-            ]
+            publicHeadersPath: "."
         ),
         xcframeworkTarget(name: "HIVE_SDK_Plugin", checksum: "3a05fb3fdb9c31ae286c987b2831d8376e42fde9334ca00ef04a116d3d36bd40"),
 // MARK: HIVE_SDK_UnityPlugin
@@ -298,12 +293,7 @@ let package = Package(
                 .target(name: "HIVE_SDK_UnityPlugin")
             ],
             path: "SDKUnityPlugin",
-            publicHeadersPath: ".",
-            linkerSettings: [
-                .unsafeFlags([
-                    "-ObjC"
-                ])
-            ]
+            publicHeadersPath: "."
         ),
         xcframeworkTarget(name: "HIVE_SDK_UnityPlugin", checksum: "302f95066957d1a6c50a79c5ad6e1e1aa498e7de7c052a22efadfaed7d5007c3"),
 // MARK: HIVE_SDK_Plugin_C2S
@@ -314,12 +304,7 @@ let package = Package(
                 .target(name: "HIVE_SDK_Plugin_C2S")
             ],
             path: "SDKPluginC2S",
-            publicHeadersPath: ".",
-            linkerSettings: [
-                .unsafeFlags([
-                    "-ObjC"
-                ])
-            ]
+            publicHeadersPath: "."
         ),
         xcframeworkTarget(name: "HIVE_SDK_Plugin_C2S", checksum: "cffbdcb5d7fa26b85dc6ea522119c1ce00e0cb70033b4a365219ffd96cb7f9d3"),
 // MARK: HIVE_SDK_UnityPlugin_C2S
@@ -330,12 +315,7 @@ let package = Package(
                 .target(name: "HIVE_SDK_UnityPlugin_C2S")
             ],
             path: "SDKUnityPluginC2S",
-            publicHeadersPath: ".",
-            linkerSettings: [
-                .unsafeFlags([
-                    "-ObjC"
-                ])
-            ]
+            publicHeadersPath: "."
         ),
         xcframeworkTarget(name: "HIVE_SDK_UnityPlugin_C2S", checksum: "df9f2101162ef184c8f49956a18a455d62899bb138553ab8206b0558f9eb3f96"),
 // MARK: HiveAdultConfirm
