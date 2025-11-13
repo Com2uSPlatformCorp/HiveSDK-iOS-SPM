@@ -5,4 +5,4 @@
 //
 //
 
-@_exported import Hive_SDKUnityPlugin_ObjC
+@_exported import UnityPlugin_ObjC

@@ -5,4 +5,4 @@
 //
 //
 
-@_exported import Hive_SDKPlugin_ObjC
+@_exported import Plugin_ObjC
