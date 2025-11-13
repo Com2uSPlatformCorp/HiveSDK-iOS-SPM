@@ -2,8 +2,8 @@
 //  Hive_SDKUnityPluginC2S.h
 //  Hive
 //
-//  Created by junely on 2025/08/04.
+//  Created by junely on 2025/11/13.
 //  Copyright © 2025 Com2us Platform. All rights reserved.
 //
 
-#import <HIVE_SDK_UnityPlugin_C2S/C2SUnityPlugin.h>
+#import "Hive_SDKUnityPluginC2S_ObjC.h"

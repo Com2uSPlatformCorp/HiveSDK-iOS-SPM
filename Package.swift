@@ -196,13 +196,6 @@ let package = Package(
             ]
         ),
         .library(
-            name: "Hive_AuthV4ProviderLine",
-            type: .static,
-            targets: [
-                "AuthV4ProviderLine"
-            ]
-        ),
-        .library(
             name: "Hive_AuthV4ProviderSignInApple",
             type: .static,
             targets: [
@@ -254,7 +247,6 @@ let package = Package(
         .package(url: "https://github.com/firebase/firebase-ios-sdk.git", exact: "11.15.0"),                            // Firebase
         .package(url: "https://github.com/facebook/facebook-ios-sdk.git", exact: "18.0.0"),                             // FaceBook
         .package(url: "https://github.com/google/GoogleSignIn-iOS.git", exact: "9.0.0"),                                // Google
-        .package(url: "https://github.com/line/line-sdk-ios-swift.git", exact: "5.13.0"),                               // Line
     ],
     targets: [
 // MARK: HiveSDK
@@ -286,44 +278,108 @@ let package = Package(
         .target(
             name: "Plugin",
             dependencies: [
-                .target(name: "HiveSDK"),
-                .target(name: "HIVE_SDK_Plugin")
+                .target(name: "Plugin_ObjC")
             ],
             path: "SDKPlugin",
             publicHeadersPath: "."
+        ),
+        .target(
+            name: "Plugin_ObjC",
+            dependencies: [
+                .target(name: "HiveSDK"),
+                .target(name: "HIVE_SDK_Plugin")
+            ],
+            path: "SDKPlugin_ObjC",
+            publicHeadersPath: ".",
+            cxxSettings: [
+                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
+            ],
+            linkerSettings: [
+                .unsafeFlags([
+                    "-ObjC"
+                ])
+            ]
         ),
         xcframeworkTarget(name: "HIVE_SDK_Plugin", checksum: "3a05fb3fdb9c31ae286c987b2831d8376e42fde9334ca00ef04a116d3d36bd40"),
 // MARK: HIVE_SDK_UnityPlugin
         .target(
             name: "UnityPlugin",
             dependencies: [
-                .target(name: "HiveSDK"),
-                .target(name: "HIVE_SDK_UnityPlugin")
+                .target(name: "UnityPlugin_ObjC")
             ],
             path: "SDKUnityPlugin",
             publicHeadersPath: "."
+        ),
+        .target(
+            name: "UnityPlugin_ObjC",
+            dependencies: [
+                .target(name: "HiveSDK"),
+                .target(name: "HIVE_SDK_UnityPlugin")
+            ],
+            path: "SDKUnityPlugin_ObjC",
+            publicHeadersPath: ".",
+            cxxSettings: [
+                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
+            ],
+            linkerSettings: [
+                .unsafeFlags([
+                    "-ObjC"
+                ])
+            ]
         ),
         xcframeworkTarget(name: "HIVE_SDK_UnityPlugin", checksum: "302f95066957d1a6c50a79c5ad6e1e1aa498e7de7c052a22efadfaed7d5007c3"),
 // MARK: HIVE_SDK_Plugin_C2S
         .target(
             name: "PluginC2S",
             dependencies: [
-                .target(name: "HiveSDK"),
-                .target(name: "HIVE_SDK_Plugin_C2S")
+                .target(name: "PluginC2S_ObjC")
             ],
             path: "SDKPluginC2S",
             publicHeadersPath: "."
+        ),
+        .target(
+            name: "PluginC2S_ObjC",
+            dependencies: [
+                .target(name: "HiveSDK"),
+                .target(name: "HIVE_SDK_Plugin_C2S")
+            ],
+            path: "SDKPluginC2S_ObjC",
+            publicHeadersPath: ".",
+            cxxSettings: [
+                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
+            ],
+            linkerSettings: [
+                .unsafeFlags([
+                    "-ObjC"
+                ])
+            ]
         ),
         xcframeworkTarget(name: "HIVE_SDK_Plugin_C2S", checksum: "cffbdcb5d7fa26b85dc6ea522119c1ce00e0cb70033b4a365219ffd96cb7f9d3"),
 // MARK: HIVE_SDK_UnityPlugin_C2S
         .target(
             name: "UnityPluginC2S",
             dependencies: [
-                .target(name: "HiveSDK"),
-                .target(name: "HIVE_SDK_UnityPlugin_C2S")
+                .target(name: "UnityPluginC2S_ObjC")
             ],
             path: "SDKUnityPluginC2S",
             publicHeadersPath: "."
+        ),
+        .target(
+            name: "UnityPluginC2S_ObjC",
+            dependencies: [
+                .target(name: "HiveSDK"),
+                .target(name: "HIVE_SDK_UnityPlugin_C2S")
+            ],
+            path: "SDKUnityPluginC2S_ObjC",
+            publicHeadersPath: ".",
+            cxxSettings: [
+                .unsafeFlags(["-std=c++11", "-stdlib=libc++", "-fcxx-modules"])
+            ],
+            linkerSettings: [
+                .unsafeFlags([
+                    "-ObjC"
+                ])
+            ]
         ),
         xcframeworkTarget(name: "HIVE_SDK_UnityPlugin_C2S", checksum: "df9f2101162ef184c8f49956a18a455d62899bb138553ab8206b0558f9eb3f96"),
 // MARK: HiveAdultConfirm
@@ -554,17 +610,6 @@ let package = Package(
             path: "AuthV4ProviderHive"
         ),
         xcframeworkTarget(name: "ProviderHive", checksum: "a73ded7220ec27b026b2a46d6189c8651a216b31e4e158fab03f8852c10ec5e4"),
-// MARK: HiveAuthV4ProviderLine
-        .target(
-            name: "AuthV4ProviderLine",
-            dependencies: [
-                .target(name: "HiveSDK"),
-                .target(name: "ProviderLine"),
-                .product(name: "LineSDK", package: "line-sdk-ios-swift")
-            ],
-            path: "AuthV4ProviderLine"
-        ),
-        xcframeworkTarget(name: "ProviderLine", checksum: "20266741cca0b06e936f62ebb16ddf68dc23b25b7e0bc2f2e27ade52656a0d80"),
 // MARK: HiveAuthV4ProviderSignInApple
         .target(
             name: "AuthV4ProviderSignInApple",
