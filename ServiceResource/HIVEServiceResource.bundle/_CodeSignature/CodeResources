@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		uSNyQX0Ib/bBpAQNaIIeUT/4j1U=
+		woczT2guAWBn/q1YgmpAW9fOWo8=
 		</data>
 		<key>HIVEResource.storyboardc/Info.plist</key>
 		<data>
@@ -56,6 +56,15 @@
 			<key>hash</key>
 			<data>
 			h2N7tSCZtGFPXT0b8nGEgXP+DyE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/AuthV4CheckAgeGate.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RFY4rfjCrghHlTnOCE8cvkUzLo4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -253,7 +262,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			I8fGzOhThi2vpvoUqOQyHT2ckqc=
+			v+yx/51bNYayiQet6H7p3vHdC90=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -310,11 +319,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uSNyQX0Ib/bBpAQNaIIeUT/4j1U=
+			woczT2guAWBn/q1YgmpAW9fOWo8=
 			</data>
 			<key>hash2</key>
 			<data>
-			5on5aR57jsH18GGyfOVmqIBWrleCg/pzCXMs5uZU9n4=
+			PiM4zzF3GlHZpEet+VZxVRHq3Fl0qWh4hwidCQAeb6A=
 			</data>
 		</dict>
 		<key>HIVEResource.storyboardc/Info.plist</key>
@@ -409,6 +418,19 @@
 			<key>hash2</key>
 			<data>
 			+0Q4XRc6hykCKXTSGuTgb4fbZJr/ksJrfhcCoYaGiQs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/AuthV4CheckAgeGate.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RFY4rfjCrghHlTnOCE8cvkUzLo4=
+			</data>
+			<key>hash2</key>
+			<data>
+			3DzLk7bYW2oJwSXrgWjss+IOd/NxcG35OwLmUyxcumM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -690,11 +712,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			I8fGzOhThi2vpvoUqOQyHT2ckqc=
+			v+yx/51bNYayiQet6H7p3vHdC90=
 			</data>
 			<key>hash2</key>
 			<data>
-			prmaiFyVKmxI/ppaJGUwahBbEorSz0JOWJP8KEtiI4Y=
+			bBa1/XII1EDgLn+BrjS5zxvpSQr5Qge5cZfJChPeZAk=
 			</data>
 			<key>optional</key>
 			<true/>

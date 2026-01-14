@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		n37CNXCb0IbAwhbu9xPu5a+VJpQ=
+		X3vg0Oa+4kgRlqRpmDzGy/l70As=
 		</data>
 		<key>Base.lproj/Localizable.strings</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>PromotionNewsV2BannerCell.nib</key>
 		<data>
-		KDN7uF5hfvJNnv8a5+OwZhAr26Q=
+		75eBzk+0ZcmhZIjNbJHxR8WBgFo=
 		</data>
 		<key>PromotionNewsV2BannerContent.nib</key>
 		<data>
-		MZuzFTi/ubq61tshKeqtZLXO8qU=
+		ugvcfJOOoiAu/dPiymcHBISFg6s=
 		</data>
 		<key>PromotionNewsV2Frame.nib</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>PromotionNewsV2Main.nib</key>
 		<data>
-		OD5/iAsyhFUUlOaV5CKKXJN1Vn8=
+		PBzdNp10cvjI7y7e0K67wGL4gpc=
 		</data>
 		<key>PromotionNewsV2Menu_click_landscape.nib</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>PromotionNewsV2MoreCell.nib</key>
 		<data>
-		u768fbRYEQbp3pYMil23nd1acoA=
+		kyqqS7l5tVCcUwwyLTKDpspjhqs=
 		</data>
 		<key>PromotionNewsV2WebContent.nib</key>
 		<data>
@@ -263,11 +263,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			n37CNXCb0IbAwhbu9xPu5a+VJpQ=
+			X3vg0Oa+4kgRlqRpmDzGy/l70As=
 			</data>
 			<key>hash2</key>
 			<data>
-			EwpJedg9jzIwRYJXXsFIOSCRBnTSDByTMWvQgrZ2qfQ=
+			HnpjmSmtFxt4i+uAr/FliciT/v66x64bkF/HbhJggmU=
 			</data>
 		</dict>
 		<key>Base.lproj/Localizable.strings</key>
@@ -351,22 +351,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KDN7uF5hfvJNnv8a5+OwZhAr26Q=
+			75eBzk+0ZcmhZIjNbJHxR8WBgFo=
 			</data>
 			<key>hash2</key>
 			<data>
-			eNtZFuOAf/O1IzltFTEhEyk1hcWuvPFSUXKwmpQSa80=
+			BfGjrgmuubZ7RbMJgm1bbg9UE1UWnF+DmnzgOsmc6+w=
 			</data>
 		</dict>
 		<key>PromotionNewsV2BannerContent.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MZuzFTi/ubq61tshKeqtZLXO8qU=
+			ugvcfJOOoiAu/dPiymcHBISFg6s=
 			</data>
 			<key>hash2</key>
 			<data>
-			EODIovzLiVudUqkXivZ5qpXlfpzoD2i+D+HIeG+EVcc=
+			o5ya/haNU4m2xowt4QrFrK/7UEzFlEAH7rBWyzgj9QY=
 			</data>
 		</dict>
 		<key>PromotionNewsV2Frame.nib</key>
@@ -395,11 +395,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OD5/iAsyhFUUlOaV5CKKXJN1Vn8=
+			PBzdNp10cvjI7y7e0K67wGL4gpc=
 			</data>
 			<key>hash2</key>
 			<data>
-			O0iPJIgYKlaMBU/nQ28xp5jx+lz8xyeC5Rz74RKb56A=
+			F+lmGCPtAGZLragmcsGsSI8AcEY7JpXoZkpjIvyym/A=
 			</data>
 		</dict>
 		<key>PromotionNewsV2Menu_click_landscape.nib</key>
@@ -450,11 +450,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			u768fbRYEQbp3pYMil23nd1acoA=
+			kyqqS7l5tVCcUwwyLTKDpspjhqs=
 			</data>
 			<key>hash2</key>
 			<data>
-			cAnEHdFRjN/I9fvb2rA5vxzu6UYI1HQkB+SDVQ6o0u0=
+			L+2oHweWyZb4B/e/MdM+EF9+gO4UlbC7vO6w0uR9yEI=
 			</data>
 		</dict>
 		<key>PromotionNewsV2WebContent.nib</key>
