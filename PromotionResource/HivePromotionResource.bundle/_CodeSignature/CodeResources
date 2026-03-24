@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		riE/Bfb4jz0SUeuWTjWjrscDWxg=
+		bkh2xuRV52WtWPSAoRMmlW5W+9Q=
 		</data>
 		<key>Base.lproj/Localizable.strings</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>CustomReview.nib</key>
 		<data>
-		058xaYvxHWRx6NyRr7uzrDhmg0s=
+		RUA2nnX5PahB9Vra2cUGn5kyiUs=
 		</data>
 		<key>CustomWebViewFull_Landscape.nib</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>CustomWebViewPopup_Landscape.nib</key>
 		<data>
-		shvAV2DNRj7NJ+bdIRoxZYH+Xio=
+		CG7Jbm0p4uGoperOvsFGhigkVX4=
 		</data>
 		<key>CustomWebViewPopup_Portrait.nib</key>
 		<data>
-		CIq62AuuOd4+OwLCErMwdcjmSmU=
+		9B0VyZBxozAwfq8gRfZrpiJ7dpE=
 		</data>
 		<key>PromotionNewsV2BannerBadge.nib</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>PromotionReviewPopup.nib</key>
 		<data>
-		j2ia4emt9usNlaXgocwBj+a+8KU=
+		i+xvLiz+W0C4nHvoR0Y2iW0PGLQ=
 		</data>
 		<key>PromotionViewDefault.nib</key>
 		<data>
@@ -94,15 +94,11 @@
 		</data>
 		<key>PromotionViewFullBanner.nib</key>
 		<data>
-		wFAOEor1jpfDsUvnqPYTTImJrBM=
+		/LZBBCsrpJ7ZW7AXM55daqlMPKc=
 		</data>
 		<key>PromotionViewFullBanner_ImageContents.nib</key>
 		<data>
-		B9aq66uiuIk7Jma+qRTAgDMjXK8=
-		</data>
-		<key>YTPlayerView-iframe-player.html</key>
-		<data>
-		su3hI0ilW0tv+DNDcvQKIhq+uSs=
+		NdfWm3AfBqNfZJKYKGR59D0hFJg=
 		</data>
 		<key>ar.lproj/Localizable.strings</key>
 		<dict>
@@ -261,13 +257,21 @@
 	<dict>
 		<key>Assets.car</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			bkh2xuRV52WtWPSAoRMmlW5W+9Q=
+			</data>
 			<key>hash2</key>
 			<data>
-			N04v7PJG4oxF5a30XSZWvRHHZMuK/5+nmWZOTjQRP2g=
+			DlEOl6VHCPYYbEESbbQ4Kwr+mEoWh2zRmgsuurEpEIw=
 			</data>
 		</dict>
 		<key>Base.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			3v2Mr0jv3hYrl74hLlHX2BnmvV8=
+			</data>
 			<key>hash2</key>
 			<data>
 			XvsQi76nhqIV7VQWx+gbCIx114gFRke/uBC0+aIffHQ=
@@ -275,13 +279,21 @@
 		</dict>
 		<key>CustomReview.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			RUA2nnX5PahB9Vra2cUGn5kyiUs=
+			</data>
 			<key>hash2</key>
 			<data>
-			vSjd6dH+N/wFAXmkq6CeuUvkYDQNwRRg7e2cSy62AJc=
+			iH+2F4LP++YVFI1+Y8uQmupjrpCY/nQPHG+SCHffb4Y=
 			</data>
 		</dict>
 		<key>CustomWebViewFull_Landscape.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			8uwvKkmZVXUHomQr5fUzlzzMd2U=
+			</data>
 			<key>hash2</key>
 			<data>
 			A/3gnUbMjmXM9OdztmhkfHIyUM9E5bUJOpuu8jGMLz4=
@@ -289,6 +301,10 @@
 		</dict>
 		<key>CustomWebViewFull_Portrait.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			yBtRcvpHv8ttCN+jZrjthPsgD7s=
+			</data>
 			<key>hash2</key>
 			<data>
 			IZ+mUXF5TVwtCShctclPHH7SWw1gUmzXD3aeKaRsJiI=
@@ -296,20 +312,32 @@
 		</dict>
 		<key>CustomWebViewPopup_Landscape.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			CG7Jbm0p4uGoperOvsFGhigkVX4=
+			</data>
 			<key>hash2</key>
 			<data>
-			vHbybJmkT9VXOpKQY+IKctjWEOvRhQncD1FThKEjeQg=
+			HfKkGuuk+gxGrvfNQzfk6cJNsklUd+Bxr7duqDgtvLU=
 			</data>
 		</dict>
 		<key>CustomWebViewPopup_Portrait.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			9B0VyZBxozAwfq8gRfZrpiJ7dpE=
+			</data>
 			<key>hash2</key>
 			<data>
-			polviz3YFrZ1/Eiazioo+uDTAb5afOmnwed43j1KzgQ=
+			6fWyJ0tZqS1wgd5nkpOqb9+C7/39Hk6ES+BgNIWIIxk=
 			</data>
 		</dict>
 		<key>PromotionNewsV2BannerBadge.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			7oIs41ThRrBO95DQ7X7vLgH5EHo=
+			</data>
 			<key>hash2</key>
 			<data>
 			tkcwF+sO13wijcdn0R8mkivQS2tLxM8qI4ujmZnbQTk=
@@ -317,6 +345,10 @@
 		</dict>
 		<key>PromotionNewsV2BannerCell.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			75eBzk+0ZcmhZIjNbJHxR8WBgFo=
+			</data>
 			<key>hash2</key>
 			<data>
 			BfGjrgmuubZ7RbMJgm1bbg9UE1UWnF+DmnzgOsmc6+w=
@@ -324,6 +356,10 @@
 		</dict>
 		<key>PromotionNewsV2BannerContent.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ugvcfJOOoiAu/dPiymcHBISFg6s=
+			</data>
 			<key>hash2</key>
 			<data>
 			o5ya/haNU4m2xowt4QrFrK/7UEzFlEAH7rBWyzgj9QY=
@@ -331,6 +367,10 @@
 		</dict>
 		<key>PromotionNewsV2Frame.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			gzWVYB2MRQKcnRO6fOqKqIqpfLo=
+			</data>
 			<key>hash2</key>
 			<data>
 			Z9EjcVbsWEbJ8R5UcsrdBtmN706JIDlK/QHU44YioO0=
@@ -338,6 +378,10 @@
 		</dict>
 		<key>PromotionNewsV2FullContent.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			b0GrYN3bMNgok02yB/YBJUELTtY=
+			</data>
 			<key>hash2</key>
 			<data>
 			oJ+fmX8DvSjx5SH6NXRnH/s+xbWhZmH6Y9iltv4VW54=
@@ -345,6 +389,10 @@
 		</dict>
 		<key>PromotionNewsV2Main.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			PBzdNp10cvjI7y7e0K67wGL4gpc=
+			</data>
 			<key>hash2</key>
 			<data>
 			F+lmGCPtAGZLragmcsGsSI8AcEY7JpXoZkpjIvyym/A=
@@ -352,6 +400,10 @@
 		</dict>
 		<key>PromotionNewsV2Menu_click_landscape.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ges+PD5fx5GD4Bq+JzqWKKBL75w=
+			</data>
 			<key>hash2</key>
 			<data>
 			OHDqTWPga5fGMQk137gM5lAg8XaS/fV28EA2ga+K/jY=
@@ -359,6 +411,10 @@
 		</dict>
 		<key>PromotionNewsV2Menu_click_portrait.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			+sEITRms9Okg58e3FjE5eg+J6xI=
+			</data>
 			<key>hash2</key>
 			<data>
 			8FiX9+iNATE6ghr0z3sYudJtN0sY23EdlCiZ/O7xPAg=
@@ -366,6 +422,10 @@
 		</dict>
 		<key>PromotionNewsV2Menu_unclick_landscape.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			TDRYqyUb3bGFuu3ffusgyx2lF7g=
+			</data>
 			<key>hash2</key>
 			<data>
 			B8iWRfTAT0LpSnzbm5eGkdO0MjAcXtpGYvlcgH6O8E0=
@@ -373,6 +433,10 @@
 		</dict>
 		<key>PromotionNewsV2Menu_unclick_portrait.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			vfUWNoZxMXPVuyAhjnsOhhwHmOc=
+			</data>
 			<key>hash2</key>
 			<data>
 			kTsqW5w8A3eqWS6oWpxHOwFPE7WTcoqPgUPlMyb0qZI=
@@ -380,6 +444,10 @@
 		</dict>
 		<key>PromotionNewsV2MoreCell.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			kyqqS7l5tVCcUwwyLTKDpspjhqs=
+			</data>
 			<key>hash2</key>
 			<data>
 			L+2oHweWyZb4B/e/MdM+EF9+gO4UlbC7vO6w0uR9yEI=
@@ -387,6 +455,10 @@
 		</dict>
 		<key>PromotionNewsV2WebContent.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ViF7gMw5DwzGkK0g5K6+g1GOlzM=
+			</data>
 			<key>hash2</key>
 			<data>
 			sESMn4qSlsQSqSjcadL61WAAmtpzF6U7UavFITVEwJE=
@@ -394,13 +466,21 @@
 		</dict>
 		<key>PromotionReviewPopup.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			i+xvLiz+W0C4nHvoR0Y2iW0PGLQ=
+			</data>
 			<key>hash2</key>
 			<data>
-			gKTIRXpWA2VoYFUjn/rsUjIu0vVjnz/oL7Y8wh138QA=
+			YGX+dkXy/DLz7IU7c8GkXdXYChy/1lXRy8+1noQy3+s=
 			</data>
 		</dict>
 		<key>PromotionViewDefault.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			WZ2KGg8sMXEjF0UEBYbhTTgAR6Q=
+			</data>
 			<key>hash2</key>
 			<data>
 			jKRVwQHKnkFwlLf39Heu0oGbWytMLeQ8TkJDGs6OyWc=
@@ -408,6 +488,10 @@
 		</dict>
 		<key>PromotionViewFrame.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			vqYcOCMdyREdEeqEsWjGuIQUD4E=
+			</data>
 			<key>hash2</key>
 			<data>
 			MXwCU0fDiK5orYQDrnyPb1tvM8DJeEj4YLJ18dY+OGs=
@@ -415,27 +499,32 @@
 		</dict>
 		<key>PromotionViewFullBanner.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			/LZBBCsrpJ7ZW7AXM55daqlMPKc=
+			</data>
 			<key>hash2</key>
 			<data>
-			J33+Lgh0Sj0nhZVubuQqbFXiPiSlaffoU0ViWBoD2Ms=
+			eqfa6eJVFFnSJZT6rgGlpQ8S9LUrGmOyB3Usq0/gR/k=
 			</data>
 		</dict>
 		<key>PromotionViewFullBanner_ImageContents.nib</key>
 		<dict>
-			<key>hash2</key>
+			<key>hash</key>
 			<data>
-			2uneLaYODETXNU0TYTF0FdkDtZ05EHiaoyYHh+jquDY=
+			NdfWm3AfBqNfZJKYKGR59D0hFJg=
 			</data>
-		</dict>
-		<key>YTPlayerView-iframe-player.html</key>
-		<dict>
 			<key>hash2</key>
 			<data>
-			LlTkzI+56lWK6wS/FUgVcg1sk5cEOlR5IOPbnTQt4B0=
+			zmszrLh5S6DVCV2W8fzDwdkiTKF5hmLpnLus1almaBQ=
 			</data>
 		</dict>
 		<key>ar.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			32btWaSyM3co6U1x0MpZrb4HIO0=
+			</data>
 			<key>hash2</key>
 			<data>
 			AGMbpt/54T2chhnVm9w67ZFk/sKLSvvMBQAydYRGFSY=
@@ -445,6 +534,10 @@
 		</dict>
 		<key>de.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			HFnHFQ/V2BlSyG7GpikPvmWqR4A=
+			</data>
 			<key>hash2</key>
 			<data>
 			KC18bJA3PA/v23blgBCl5P7vwfvvvL9RgeBBSeTXiVE=
@@ -454,6 +547,10 @@
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			3v2Mr0jv3hYrl74hLlHX2BnmvV8=
+			</data>
 			<key>hash2</key>
 			<data>
 			XvsQi76nhqIV7VQWx+gbCIx114gFRke/uBC0+aIffHQ=
@@ -463,6 +560,10 @@
 		</dict>
 		<key>es.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			JF7G9PVnqBb4PQkTkaVF7KCHRGw=
+			</data>
 			<key>hash2</key>
 			<data>
 			B3ZrhBEDHWiMf7hoVBPpwNvd0Tw2M3GMUu7YQgb28iE=
@@ -472,6 +573,10 @@
 		</dict>
 		<key>fr.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			e96r7vCCObXF3EHkB4Aah6O6G2A=
+			</data>
 			<key>hash2</key>
 			<data>
 			ALiF9D3sjnE+hd9AMD6galEsRtlobjie2nW6eM3gBvo=
@@ -481,6 +586,10 @@
 		</dict>
 		<key>hive_error_embed.html</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			UznIJrK7dC8BYWxpFBlBwClYZU8=
+			</data>
 			<key>hash2</key>
 			<data>
 			p4TArrMmxD21rcyxvLG4pDec5Am4vchBrl2osTH0M+I=
@@ -488,6 +597,10 @@
 		</dict>
 		<key>hive_error_embed_v2.html</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			r3qpZtSzKWxbf3BiRYaXP9ClHDE=
+			</data>
 			<key>hash2</key>
 			<data>
 			GGSrkd+GqASDDEEobiek0vYnjceLVMvjPfqYQXyOLws=
@@ -495,6 +608,10 @@
 		</dict>
 		<key>id.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			MsQSm2KJUdkEzwVAY2OOFYcCvYQ=
+			</data>
 			<key>hash2</key>
 			<data>
 			x5APZ0kBH3r26qNrMIF9fiwplxhQu3ZYq4u6JFhl/zA=
@@ -504,6 +621,10 @@
 		</dict>
 		<key>it.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			Tp/cfBbIXokecpK5ubCued6wYk4=
+			</data>
 			<key>hash2</key>
 			<data>
 			5zLlvX8USkM5JmJotoRcXHAohiWbJhcryO7FFzSLGOQ=
@@ -513,6 +634,10 @@
 		</dict>
 		<key>ja.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			lpRjrWDF5/Bj7om6QJTT6N4AJ38=
+			</data>
 			<key>hash2</key>
 			<data>
 			T7gmcT86xTEGifdldhLRJLVJ8a2Pauc9u0pFiFj8Eko=
@@ -522,6 +647,10 @@
 		</dict>
 		<key>ko.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			4JVpA7kGsvLeRv2+Smw1fOtG41A=
+			</data>
 			<key>hash2</key>
 			<data>
 			fYlKnQb8a8w72bQMOu6v/HEHM0TIJaBK2x/c8ubh8ds=
@@ -531,6 +660,10 @@
 		</dict>
 		<key>pt.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			oJIhHzI8QMXF0D/DMsVOllPr23g=
+			</data>
 			<key>hash2</key>
 			<data>
 			5RTx1GZ8YCboKmdpMFDYkOHBAdF1Om+mkc9W/64KzoA=
@@ -540,6 +673,10 @@
 		</dict>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			/SuutzME3AOy+DF8bAasw0QhZyA=
+			</data>
 			<key>hash2</key>
 			<data>
 			2fTmmvi45xrlNANVFkihh8SEYyYi8Ka3o1DuQ1o1xkk=
@@ -549,6 +686,10 @@
 		</dict>
 		<key>th.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			vfHnJNy1EHxFgk+3vTOzaie6mIg=
+			</data>
 			<key>hash2</key>
 			<data>
 			WGDSjoCxikBwzy7qqMU/epnF4D3F+uHvpKVXe0l+jwc=
@@ -558,6 +699,10 @@
 		</dict>
 		<key>tr.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			XC3M4by3Uj/OAAbBmoiqLNQop80=
+			</data>
 			<key>hash2</key>
 			<data>
 			kDBQ4KiPWXRQdGiFWg3DTRuR6bFJwd256MtDFPkXNoo=
@@ -567,6 +712,10 @@
 		</dict>
 		<key>vi.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			WZNoMmeS7/xaQkeN4p9OKr//NAU=
+			</data>
 			<key>hash2</key>
 			<data>
 			1pLE6dJOZp7Ie2mc478KbY47vagJr0AQqI5ie+JHn84=
@@ -576,6 +725,10 @@
 		</dict>
 		<key>zh-Hans.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			9PPeRH5ggVmatdvnQmIx1MF790c=
+			</data>
 			<key>hash2</key>
 			<data>
 			Ue5PF/kCrx2Vd6QUYyiKUyUf+h4aUN9tedrCJc60TRM=
@@ -585,6 +738,10 @@
 		</dict>
 		<key>zh-Hant.lproj/Localizable.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			Cb7+tnlWADVDSPelXbjMkIGNwaY=
+			</data>
 			<key>hash2</key>
 			<data>
 			5zVeqiUO85dcT985y0zXMlLnrutHmKhnPftZ5DX5fEE=
