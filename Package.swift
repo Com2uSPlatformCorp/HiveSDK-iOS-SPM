@@ -4,7 +4,7 @@
 import PackageDescription
 
 private let isDevMode = false
-private let packageVersion = "26.6.0-beta8"
+private let packageVersion = "26.6.0-beta9"
 
 let package = Package(
     name: "Hive",
