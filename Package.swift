@@ -4,7 +4,7 @@
 import PackageDescription
 
 private let isDevMode = false
-private let packageVersion = "26.6.0-beta13"
+private let packageVersion = "26.6.0"
 
 let package = Package(
     name: "Hive",
@@ -305,7 +305,7 @@ let package = Package(
         xcframeworkTarget(name: "HIVECore", checksum: "f00e1992744d2d2e249c27750e37a3b63340de3fbfd5a0fbdd352173fee5343c"),
         xcframeworkTarget(name: "HIVEProtocol", checksum: "65e3ed58c1a169c02030642bfeaf3f310e7cbcdb385d2e1f9db573e16f74ddfc"),
         xcframeworkTarget(name: "HIVEUI", checksum: "9a62f339c34e9717a18cd95f26ed75bf62bc910153758a0bbf69a19a1d3c753d"),
-        xcframeworkTarget(name: "HIVEService", checksum: "708c343ee39e70fef1bf5fef46ad06fde496de19f4e3a3028df0e6db68c2b9e7"),
+        xcframeworkTarget(name: "HIVEService", checksum: "7f42d0aae6d62beeff15e5b21766d10193acfa6b30e6a8c7af846a2fdce9fff6"),
         bundleTarget(isPrefixUppercased: true, name: "Core"),
         bundleTarget(isPrefixUppercased: true, name: "UI", as: ""),
         bundleTarget(isPrefixUppercased: true, name: "Service"),
