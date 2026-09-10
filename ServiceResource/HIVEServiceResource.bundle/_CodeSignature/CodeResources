@@ -96,6 +96,24 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>fil.lproj/AuthV4CheckAgeGate.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			duIMEZY11KRF010vcCDDqT2l6dc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fil.lproj/PushActionLocalizables.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eQy1na5JUTVvMNZerSWPC78qOxE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>fr.lproj/AuthV4CheckAgeGate.strings</key>
 		<dict>
 			<key>hash</key>
@@ -470,6 +488,32 @@
 			<key>hash2</key>
 			<data>
 			a+Oudzo7Q7Afvlj1Y6+lUx83I6EOqeCNHdH+jGkZpOs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fil.lproj/AuthV4CheckAgeGate.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			duIMEZY11KRF010vcCDDqT2l6dc=
+			</data>
+			<key>hash2</key>
+			<data>
+			5FB0u7ZTTvgKYjUgNy4AQpkO+/v/cwZ+kKiKUeMGTAo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fil.lproj/PushActionLocalizables.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eQy1na5JUTVvMNZerSWPC78qOxE=
+			</data>
+			<key>hash2</key>
+			<data>
+			hGbUGfBa6ZrnyLfCNHq6T5FVxvN1Fon/6O3swKrwsbw=
 			</data>
 			<key>optional</key>
 			<true/>
