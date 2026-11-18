@@ -5,4 +5,4 @@
 //
 //
 
-@_exported import ProviderX
+@_exported import HiveChat
